@@ -431,7 +431,7 @@ export function GlobeSection() {
           }}
           className="div"
         >
-          <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
+          <h2 className="text-center text-xl md:text-6xl font-bold text-black dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-transparent bg-clip-text text-transparent">
           AI Tools Repository
           </h2>
           <div className="flex justify-center h-[40rem] text-sm"><TypewriterEffectSmooth words={words}/>

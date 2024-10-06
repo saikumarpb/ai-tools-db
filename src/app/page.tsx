@@ -1,12 +1,20 @@
 import Image from "next/image";
 import { GlobeSection } from "./components/globe-section";
+import {  } from "./components/ui/tabs";
+import { TabSection } from "./components/tab-section";
 
 export default function Home() {
+  
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen pt-2 pb-20 gap-16 font-[family-name:var(--font-geist-sans)] dark:bg-black">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start w-full">
         {/* <Navbar/> */}
+        <div className="w-full">
         <GlobeSection/>
+        <TabSection/>
+        </div>
+
+
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
             Get started by editing{" "}
