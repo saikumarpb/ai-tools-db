@@ -35,3 +35,9 @@ body {
 .no-visible-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
