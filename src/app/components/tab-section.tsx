@@ -3,58 +3,58 @@ import { Tabs } from './ui/tabs';
 export function TabSection() {
     const tabs = [
         {
-            title: 'Product',
-            value: 'product',
+            title: 'Tools',
+            value: 'Tools',
             content: (
                 <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-r from-blue-900 to-sky-700">
-                    <p>Product Tab</p>
+                    <p>Tools</p>
                     <DummyContent />
                 </div>
             ),
         },
         {
-            title: 'Services',
-            value: 'services',
+            title: 'About',
+            value: 'About',
             content: (
                 <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-r from-blue-900 to-sky-700">
-                    <p>Services tab</p>
+                    <p>About</p>
                     <DummyContent />
                 </div>
             ),
         },
         {
-            title: 'Playground',
-            value: 'playground',
+            title: 'Events',
+            value: 'Events',
             content: (
                 <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-r from-blue-900 to-sky-700">
-                    <p>Playground tab</p>
+                    <p>Events</p>
                     <DummyContent />
                 </div>
             ),
         },
         {
-            title: 'Content',
-            value: 'content',
+            title: 'Contact',
+            value: 'Contact',
             content: (
                 <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-r from-blue-900 to-sky-700">
-                    <p>Content tab</p>
+                    <p>Contact</p>
                     <DummyContent />
                 </div>
             ),
         },
         {
-            title: 'Random',
-            value: 'random',
+            title: 'Subscribe',
+            value: 'Subscribe',
             content: (
                 <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-r from-blue-900 to-sky-700">
-                    <p>Random tab</p>
+                    <p>Subscribe</p>
                     <DummyContent />
                 </div>
             ),
         },
     ];
     return (
-        <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-center mb-40">
+        <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-7xl mx-auto w-full  items-start justify-center mb-40">
             <Tabs tabs={tabs} />
         </div>
     );

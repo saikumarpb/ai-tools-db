@@ -28,7 +28,9 @@ export const HoverEffect = ({
         >
             {items.map((item, idx) => (
                 <Link
-                    href={`/tools/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    href={`/tools/${item.title
+                        .toLowerCase()
+                        .replace(/\s+/g, '-')}`}
                     key={item?.title}
                     className="relative group  block p-2 h-full w-full"
                     onMouseEnter={() => setHoveredIndex(idx)}
@@ -61,6 +63,8 @@ export const HoverEffect = ({
                             className="object-cover"
                         />
                         <div className="flex justify-between gap-5">
+                            <CardTitle>{item.title}</CardTitle>
+
                             <CardImage>
                                 <Image
                                     height="100"
@@ -70,7 +74,6 @@ export const HoverEffect = ({
                                     className="h-10 w-auto rounded border-2 object-cover"
                                 />
                             </CardImage>
-                            <CardTitle>{item.title}</CardTitle>
                         </div>
 
                         <CardDescription>
@@ -115,7 +118,7 @@ export const CardTitle = ({
     return (
         <h4
             className={cn(
-                'text-zinc-100 font-bold tracking-wide mt-4',
+                'text-zinc-100 font-extrabold text-lg tracking-wide mt-4',
                 className
             )}
         >
