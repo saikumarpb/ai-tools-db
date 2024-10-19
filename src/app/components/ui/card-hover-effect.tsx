@@ -28,7 +28,7 @@ export const HoverEffect = ({
         >
             {items.map((item, idx) => (
                 <Link
-                    href={item?.link}
+                    href={`/tools/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                     key={item?.title}
                     className="relative group  block p-2 h-full w-full"
                     onMouseEnter={() => setHoveredIndex(idx)}
@@ -54,10 +54,11 @@ export const HoverEffect = ({
                     <Card>
                         <Image
                             src={item.tileUrl}
-                            height="100"
-                            width="100"
+                            width={100}
+                            height={100}
                             alt="tile"
-                            className='w-full'
+                            layout="responsive"
+                            className="object-cover"
                         />
                         <div className="flex justify-between gap-5">
                             <CardImage>

@@ -63,12 +63,12 @@ export default function Page() {
     };
 
     return (
-        <div className="flex flex-col items-center min-h-screen p-20 gap-16 font-[family-name:var(--font-geist-sans)] dark:bg-black">
-            <h2 className="text-center text-xl md:text-6xl font-bold text-black dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-transparent bg-clip-text text-transparent">
+        <div className="flex flex-col items-center min-h-screen p-4 md:p-8 lg:p-16 xl:p-20 font-[family-name:var(--font-geist-sans)] dark:bg-black">
+            <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent pb-4 md:pb-8 lg:pb-16">
                 {'AI Tools Repository  '}
             </h2>
 
-            <div className="w-full sm:min-w-[24rem] max-w-md">
+            <div className="w-full sm:min-w-[24rem] max-w-md px-4  pb-4 md:pb-8 lg:pb-16">
                 <Input
                     type="search"
                     placeholder="Search"
@@ -78,7 +78,7 @@ export default function Page() {
                 />
             </div>
             <Filters getFilterState={filters} />
-            <div className="max-w-5xl mx-auto px-8">
+            <div className="max-w-5xl mx-auto">
                 <HoverEffect
                     items={items.map((tool) => ({
                         title: tool['Tool Name'],

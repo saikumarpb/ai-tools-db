@@ -54,7 +54,7 @@ export function Filters({ getFilterState }: FiltersProps): JSX.Element {
             selectedCat,
             apiAvailable,
         });
-    }, [selectedPriceCat, selectedCat, apiAvailable]); 
+    }, [selectedPriceCat, selectedCat, apiAvailable]);
 
     const resetFilters = () => {
         setSelectedPriceCat('All');
@@ -63,14 +63,14 @@ export function Filters({ getFilterState }: FiltersProps): JSX.Element {
     };
 
     return (
-        <div className="w-full p-4 border h-fit border-gray-700 rounded-md grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center mx-auto">
-            <div className="flex gap-3 items-center">
-                <span className="">Price:</span>
+        <div className="w-full p-4 border h-fit border-gray-700 rounded-2xl flex flex-wrap gap-4 max-w-5xl justify-between">
+            <div className="flex items-center justify-between w-full sm:w-[48%] lg:w-[26%]">
+                <span className="pr-3">Price:</span>
                 <Select
                     value={selectedPriceCat}
                     onValueChange={(value) => setSelectedPriceCat(value)}
                 >
-                    <SelectTrigger className="w-[180px]">
+                    <SelectTrigger className="w-full">
                         <SelectValue placeholder="Select" />
                     </SelectTrigger>
                     <SelectContent className="bg-black">
@@ -85,13 +85,13 @@ export function Filters({ getFilterState }: FiltersProps): JSX.Element {
                 </Select>
             </div>
 
-            <div className="flex gap-3 items-center">
-                <span className="">Category:</span>
+            <div className="flex items-center justify-between w-full sm:w-[48%] lg:w-[26%]">
+                <span className="pr-3">Category:</span>
                 <Select
                     value={selectedCat}
                     onValueChange={(value) => setSelectedCat(value)}
                 >
-                    <SelectTrigger className="w-[180px]">
+                    <SelectTrigger className="w-full">
                         <SelectValue placeholder="Select" />
                     </SelectTrigger>
                     <SelectContent className="bg-black">
@@ -106,13 +106,13 @@ export function Filters({ getFilterState }: FiltersProps): JSX.Element {
                 </Select>
             </div>
 
-            <div className="flex gap-3 items-center">
-                <span className="">API:</span>
+            <div className="flex items-center justify-between w-full sm:w-[48%] lg:w-[26%]">
+                <span className="pr-3">API:</span>
                 <Select
                     value={apiAvailable ? 'All' : 'Yes'}
                     onValueChange={(value) => setApiAvailable(value === 'All')}
                 >
-                    <SelectTrigger className="w-[180px]">
+                    <SelectTrigger className="w-full">
                         <SelectValue placeholder="Select" />
                     </SelectTrigger>
                     <SelectContent className="bg-black">
@@ -130,7 +130,7 @@ export function Filters({ getFilterState }: FiltersProps): JSX.Element {
 
             <Button
                 onClick={resetFilters}
-                className="bg-white text-black hover:bg-black hover:text-white border w-fit"
+                className="bg-white text-black hover:bg-black hover:text-white border"
             >
                 Reset Filters
             </Button>
